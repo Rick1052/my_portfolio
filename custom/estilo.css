@@ -1,0 +1,77 @@
+*{
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+/* Dispositivo muito pequeno (phones, 600px e menor) */
+@media only screen and (max-width: 600px) {
+    .col-{
+        width: 100%;
+        /* float: left; */
+    }
+    body{
+        background-image: url("./../imagem/backgorund.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    header{
+        background-color: rgba(0,0,0,.8);
+        padding: 10px 5px 10px 5px;
+    }
+    header figure{
+        display: flex;
+        justify-content: center;
+    }
+    header nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    header li{
+        display: flex;
+        justify-content: center;
+    }
+    header a{
+        color: #ccc;
+        text-decoration: none;
+        justify-content: center;
+    }
+    section{
+        display: flex;
+        justify-content: center;
+    }
+    article{
+        padding: 10px;
+    }
+    article h3{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/* Dispositivo pequeno (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* Dispositivos médios (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    
+}
+
+/* Dispositivos largos (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    
+}
+
+/* Dispositivos extra largos (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    
+}
