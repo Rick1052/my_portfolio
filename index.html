@@ -11,11 +11,19 @@
 </head>
 <body>
     <header>
-        <figure class="col-">
-            <img src="imagem/logo_henrique.png" alt="Logo" width="">
-        </figure>
+        <div class="titulo">
+            <figure class="">
+                <img src="imagem/logo_henrique.png" alt="Logo" width="">
+            </figure>
+            <button type="button" id="buttonMenu" onclick="handleClick()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>            
         <br>
-        <nav class="col-">
+        <nav class="col-" id="menu">
             <ul>
                 <li><a href="">Sobre mim</a></li>
                 <li><a href="">Currículo</a></li>
@@ -23,16 +31,31 @@
             </ul>
         </nav>
     </header>
+    <div class="separa" id="separa"></div>
     <main>
-        <section id="sobre_mim" class="">
+        <section id="dados_pessoais" class="col- dados_pessoais">
             <article class="col-">
-                <h3>Sobre mim</h3><br>
+                <h3>Dados Pessoais</h3><br>
                 <p><span>Nome: </span>Henrique Gabriel Santos</p>
                 <p><span>Idade: </span>20 anos</p>
                 <p><span>Genêro: </span>Masculino</p>
-
             </article>
         </section>
+
+        <section id="sobre_mim" class="col- sobre_mim">
+            <article class="col-">
+                <h3>Sobre mim</h3><br>
+                <p>Olá, eu sou o Henrique, tenho 20 anos e sou engenheiro de software. Minha carreira se iniciou quando eu tinha 12 anos e já tinha interesse em me envolver com computadores, entendendo melhor suas arquiteturas e como funcionavam. Foi nessa idade que decidi realizar meu primeiro curso de informática. Inicialmente, foi desanimador; eu pensei que iria aprender a produzir jogos e programá-los, mas, quando cheguei lá, tive apenas aulas de Excel e Word, mas me ajudaram a conseguir meu primeiro emprego. Apesar de não ser o que eu esperava, eu completei o curso.
+                <br><br>
+                Em 2018, ao ingressar no ensino médio, decidi fazer integrado com o técnico de informática, pois já era uma área de meu interesse. Foi lá que me apaixonei ainda mais pelo assunto. Aprendi como funciona um computador, seus hardwares, e tive contato com HTML e CSS, além da primeira linguagem de programação, PHP. Após esse curso, meu interesse em me especializar na área cresceu. Assisti a vídeo aulas, fiz cursos online e aprendi novas linguagens como C++, JavaScript, Nodejs, Python, entre outras. Atualmente, estou cursando o 3º período de Engenharia de Software na Campo Real. Estou apaixonado pelo curso, tirando dúvidas, aprendendo as metodologias corretas a serem desenvolvidas, e me especializando ainda mais na parte de Front-End.</p>
+            </article>
+        </section>
+
+        <footer>
+            <p>Criado por Henrique Gabriel Santos - 29/02/2024</p>
+        </footer>
     </main>
+
+    <script src="custom/script.js"></script>
 </body>
 </html>
