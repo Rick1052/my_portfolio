@@ -23,31 +23,131 @@
 
         </div>            
         <br>
-        <nav class="col-" id="menu">
-            <ul>
-                <li><a href="">Sobre mim</a></li>
-                <li><a href="">Currículo</a></li>
-                <li><a href="">Contato</a></li>
-            </ul>
-        </nav>
     </header>
-    <div class="separa" id="separa"></div>
-    <main>
-        <section id="dados_pessoais" class="col- dados_pessoais">
-            <article class="col-">
-                <h3>Dados Pessoais</h3><br>
-                <p><span>Nome: </span>Henrique Gabriel Santos</p>
-                <p><span>Idade: </span>20 anos</p>
-                <p><span>Genêro: </span>Masculino</p>
-            </article>
-        </section>
+    <div class="container">
+        <div id="menu">
+            <nav class="col-sd" >
+                <ul>
+                    <li><button onclick="sobreMim()">Sobre mim</button></li>
+                    <li><button onclick="curriculo()">Currículo</button></li>
+                    <li><button onclick="contato()">Contato</button></li>
+                </ul>
+            </nav>
+        </div>                
+    </div>
+    <main class="separa" id="separa">
 
-        <section id="sobre_mim" class="col- sobre_mim">
-            <article class="col-">
+        <section id="sobre_mim" class="col-sd sobre_mim">
+            <article class="col-sd">
                 <h3>Sobre mim</h3><br>
                 <p>Olá, eu sou o Henrique, tenho 20 anos e sou engenheiro de software. Minha carreira se iniciou quando eu tinha 12 anos e já tinha interesse em me envolver com computadores, entendendo melhor suas arquiteturas e como funcionavam. Foi nessa idade que decidi realizar meu primeiro curso de informática. Inicialmente, foi desanimador; eu pensei que iria aprender a produzir jogos e programá-los, mas, quando cheguei lá, tive apenas aulas de Excel e Word, mas me ajudaram a conseguir meu primeiro emprego. Apesar de não ser o que eu esperava, eu completei o curso.
                 <br><br>
                 Em 2018, ao ingressar no ensino médio, decidi fazer integrado com o técnico de informática, pois já era uma área de meu interesse. Foi lá que me apaixonei ainda mais pelo assunto. Aprendi como funciona um computador, seus hardwares, e tive contato com HTML e CSS, além da primeira linguagem de programação, PHP. Após esse curso, meu interesse em me especializar na área cresceu. Assisti a vídeo aulas, fiz cursos online e aprendi novas linguagens como C++, JavaScript, Nodejs, Python, entre outras. Atualmente, estou cursando o 3º período de Engenharia de Software na Campo Real. Estou apaixonado pelo curso, tirando dúvidas, aprendendo as metodologias corretas a serem desenvolvidas, e me especializando ainda mais na parte de Front-End.</p>
+            </article>
+        </section>
+
+        <section id="curriculo" class="col-sd curriculo">
+            <article class="col-sd">
+                <h2><b>Currículo Henrique</b></h2>
+                <div class="photo">
+                    <img src="imagem/henrique.jpg" alt="photo of Henrique" width="25%">
+                </div>
+
+                <div class="dados_pessoais">
+                    <h3>Dados Pessoais</h3>
+                    <p>Nome: Henrique Gabriel Pires dos Santos</p>
+                    <p>Celular: +55 (42) 9 8829-3833</p>
+                    <p>Email: sant.gp.henrique@gmail.com</p>
+                    <p>Idade: 20 anos</p>
+                    <p>Endereço: Rua Antonio Carlos Cúnico, 413</p>
+                    <p>Bairro: Boqueirão</p>
+                    <p>Cidade: Guarapuava - PR</p>
+                </div>
+
+                <div class="midia_social">
+                    <h3>Mídias Sociais</h3>
+                    <div class="instagram">
+                        <i class="">
+                            <svg enable-background="new 0 0 128 128" id="Social_Icons" version="1.1" viewBox="0 0 128 128" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="_x37__stroke"><g id="Instagram_1_"><rect clip-rule="evenodd" fill="none" fill-rule="evenodd" height="128" width="128"/><radialGradient cx="19.1111" cy="128.4444" gradientUnits="userSpaceOnUse" id="Instagram_2_" r="163.5519"><stop offset="0" style="stop-color:#FFB140"/><stop offset="0.2559" style="stop-color:#FF5445"/><stop offset="0.599" style="stop-color:#FC2B82"/><stop offset="1" style="stop-color:#8E40B7"/></radialGradient><path clip-rule="evenodd" d="M105.843,29.837    c0,4.242-3.439,7.68-7.68,7.68c-4.241,0-7.68-3.438-7.68-7.68c0-4.242,3.439-7.68,7.68-7.68    C102.405,22.157,105.843,25.595,105.843,29.837z M64,85.333c-11.782,0-21.333-9.551-21.333-21.333    c0-11.782,9.551-21.333,21.333-21.333c11.782,0,21.333,9.551,21.333,21.333C85.333,75.782,75.782,85.333,64,85.333z M64,31.135    c-18.151,0-32.865,14.714-32.865,32.865c0,18.151,14.714,32.865,32.865,32.865c18.151,0,32.865-14.714,32.865-32.865    C96.865,45.849,82.151,31.135,64,31.135z M64,11.532c17.089,0,19.113,0.065,25.861,0.373c6.24,0.285,9.629,1.327,11.884,2.204    c2.987,1.161,5.119,2.548,7.359,4.788c2.24,2.239,3.627,4.371,4.788,7.359c0.876,2.255,1.919,5.644,2.204,11.884    c0.308,6.749,0.373,8.773,0.373,25.862c0,17.089-0.065,19.113-0.373,25.861c-0.285,6.24-1.327,9.629-2.204,11.884    c-1.161,2.987-2.548,5.119-4.788,7.359c-2.239,2.24-4.371,3.627-7.359,4.788c-2.255,0.876-5.644,1.919-11.884,2.204    c-6.748,0.308-8.772,0.373-25.861,0.373c-17.09,0-19.114-0.065-25.862-0.373c-6.24-0.285-9.629-1.327-11.884-2.204    c-2.987-1.161-5.119-2.548-7.359-4.788c-2.239-2.239-3.627-4.371-4.788-7.359c-0.876-2.255-1.919-5.644-2.204-11.884    c-0.308-6.749-0.373-8.773-0.373-25.861c0-17.089,0.065-19.113,0.373-25.862c0.285-6.24,1.327-9.629,2.204-11.884    c1.161-2.987,2.548-5.119,4.788-7.359c2.239-2.24,4.371-3.627,7.359-4.788c2.255-0.876,5.644-1.919,11.884-2.204    C44.887,11.597,46.911,11.532,64,11.532z M64,0C46.619,0,44.439,0.074,37.613,0.385C30.801,0.696,26.148,1.778,22.078,3.36    c-4.209,1.635-7.778,3.824-11.336,7.382C7.184,14.3,4.995,17.869,3.36,22.078c-1.582,4.071-2.664,8.723-2.975,15.535    C0.074,44.439,0,46.619,0,64c0,17.381,0.074,19.561,0.385,26.387c0.311,6.812,1.393,11.464,2.975,15.535    c1.635,4.209,3.824,7.778,7.382,11.336c3.558,3.558,7.127,5.746,11.336,7.382c4.071,1.582,8.723,2.664,15.535,2.975    C44.439,127.926,46.619,128,64,128c17.381,0,19.561-0.074,26.387-0.385c6.812-0.311,11.464-1.393,15.535-2.975    c4.209-1.636,7.778-3.824,11.336-7.382c3.558-3.558,5.746-7.127,7.382-11.336c1.582-4.071,2.664-8.723,2.975-15.535    C127.926,83.561,128,81.381,128,64c0-17.381-0.074-19.561-0.385-26.387c-0.311-6.812-1.393-11.464-2.975-15.535    c-1.636-4.209-3.824-7.778-7.382-11.336c-3.558-3.558-7.127-5.746-11.336-7.382c-4.071-1.582-8.723-2.664-15.535-2.975    C83.561,0.074,81.381,0,64,0z" fill="url(#Instagram_2_)" fill-rule="evenodd" id="Instagram"/></g></g></svg>
+                        </i>
+                        <p><a href="https://www.instagram.com/riick_gab">@riick_gab</a></p><br>                        
+
+                    </div>
+                    <div class="linkedin">
+                        <i class="">
+                            <svg height="100%" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;" version="1.1" viewBox="0 0 512 512" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:serif="http://www.serif.com/" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="g5891"><path d="M512,64c0,-35.323 -28.677,-64 -64,-64l-384,0c-35.323,0 -64,28.677 -64,64l0,384c0,35.323 28.677,64 64,64l384,0c35.323,0 64,-28.677 64,-64l0,-384Z" id="background" style="fill:#2867b2;"/><g id="shapes"><rect height="257.962" id="rect11" style="fill:#fff;" width="85.76" x="61.053" y="178.667"/><path d="M104.512,54.28c-29.341,0 -48.512,19.29 -48.512,44.573c0,24.752 18.588,44.574 47.377,44.574l0.554,0c29.903,0 48.516,-19.822 48.516,-44.574c-0.555,-25.283 -18.611,-44.573 -47.935,-44.573Z" id="path13-0" style="fill:#fff;fill-rule:nonzero;"/><path d="M357.278,172.601c-45.49,0 -65.866,25.017 -77.276,42.589l0,-36.523l-85.738,0c1.137,24.197 0,257.961 0,257.961l85.737,0l0,-144.064c0,-7.711 0.554,-15.42 2.827,-20.931c6.188,-15.4 20.305,-31.352 43.993,-31.352c31.012,0 43.436,23.664 43.436,58.327l0,138.02l85.741,0l0,-147.93c0,-79.237 -42.305,-116.097 -98.72,-116.097Z" id="path15" style="fill:#fff;fill-rule:nonzero;"/></g></g></svg>
+                        </i>
+                        <p><a href="https://www.linkedin.com/in/henrique-rick-44819a289/">Henrique Santos</a></p>
+                    </div>
+                    <div class="github">
+                        <i class="">
+                            <svg enable-background="new 0 0 128 128" id="Social_Icons" version="1.1" viewBox="0 0 128 128" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="_x31__stroke"><g id="Github_1_"><rect clip-rule="evenodd" fill="none" fill-rule="evenodd" height="128" width="128"/><path clip-rule="evenodd" d="M63.996,1.333C28.656,1.333,0,30.099,0,65.591    c0,28.384,18.336,52.467,43.772,60.965c3.2,0.59,4.368-1.394,4.368-3.096c0-1.526-0.056-5.566-0.088-10.927    c-17.804,3.883-21.56-8.614-21.56-8.614c-2.908-7.421-7.104-9.397-7.104-9.397c-5.812-3.988,0.44-3.907,0.44-3.907    c6.42,0.454,9.8,6.622,9.8,6.622c5.712,9.819,14.98,6.984,18.628,5.337c0.58-4.152,2.236-6.984,4.064-8.59    c-14.212-1.622-29.152-7.132-29.152-31.753c0-7.016,2.492-12.75,6.588-17.244c-0.66-1.626-2.856-8.156,0.624-17.003    c0,0,5.376-1.727,17.6,6.586c5.108-1.426,10.58-2.136,16.024-2.165c5.436,0.028,10.912,0.739,16.024,2.165    c12.216-8.313,17.58-6.586,17.58-6.586c3.492,8.847,1.296,15.377,0.636,17.003c4.104,4.494,6.58,10.228,6.58,17.244    c0,24.681-14.964,30.115-29.22,31.705c2.296,1.984,4.344,5.903,4.344,11.899c0,8.59-0.08,15.517-0.08,17.626    c0,1.719,1.152,3.719,4.4,3.088C109.68,118.034,128,93.967,128,65.591C128,30.099,99.344,1.333,63.996,1.333" fill="#3E75C3" fill-rule="evenodd" id="Github"/></g></g></svg>
+                        </i>
+                        <p><a href="https://www.hithub.com/Rick1052">Henrique Santos</a></p>
+                    </div>
+                </div>
+
+                <div class="dados_prof">
+                    <h3>Dados Profissionais</h3>
+                    <ul>
+                        <p><b>Padaria Pães Vitória: </b>Produção de massas 2017 - 2019</p>
+                        <li>Produção de pão caseiro e sonhos;</li>
+                        <li>Preparo de embalagem.</li>
+                    </ul><br>
+                    <ul>
+                        <p><b>Porterite: </b>Auxiliar Administrativo 06/2020 - 2024</p>
+                        <li>Controle de estoque;</li>
+                        <li>Controle de Contas a Receber;</li>
+                        <li>Controle de Contas a Pagar;</li>
+                        <li>Controle de Vendas;</li>
+                        <li>Emissão de Nota Fiscal;</li>
+                        <li>Lançamentos de Nota Fiscal/ XML;</li>
+                        <li>Vendedor.</li>
+                    </ul>
+                </div>
+
+                <div class="dados_acad">
+                    <h3>Dados Acadêmicos</h3>
+                    <ul>
+                        <p><b>ESTEPE: </b>Curso de informática do básico ao avançado 2015 - 2018</p>
+                        <li>Word avançado;</li>
+                        <li>Excel avançado.</li>
+                    </ul><br>
+                    <ul>
+                        <p><b>Francisco Carneiro Martins: </b>Ensino médio e técnico em informática 2018 - 2021</p>
+                        <li>Montagem de computadores;</li>
+                        <li>linguagem de marcação;</li>
+                        <li>Básico em PHP;</li>
+                        <li>Conhecimento básico em Hardware e Software;</li>
+                        <li>Conhecimento pacote Libre Office e Gimp.</li>
+                    </ul>
+                    
+                </div>
+            </article>
+        </section>
+        <section id="contato" class="col-sd contato">
+            <article>
+                <div class="entre_cont">
+                    <h3>Entre em contato</h3>
+                    <form action="POST">
+                        <div class="nome">
+                            <label for="name">Nome: </label>
+                            <input type="text" placeholder="Nome Completo">
+                        </div>                            
+                        <div class="email">
+                            <label for="email">Email: </label>
+                            <input type="email" placeholder="Melhor Email">
+                        </div>                            
+                        <div class="nome">
+                            <label for="mensage">Mensagem: </label>
+                            <textarea></textarea>
+                        </div>                            
+                    </form>
+                </div><br>
+                <h3>Contatos</h3><br>
+                <p>Telefone: (42) 9 8829-3833</p>
+                <p>Email: sant.gp.henrique@gmail.com</p>
+                <p>Instagram: @riick_gab</p>
             </article>
         </section>
 

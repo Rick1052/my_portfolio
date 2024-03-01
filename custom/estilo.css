@@ -9,15 +9,21 @@
     color: #fff;
 }
 
+#sobre_mim{
+    display: block;
+}
+#curriculo{
+    display: none;
+}
+#contato{
+    display: none;
+}
+
 /* Dispositivo muito pequeno (phones, 600px e menor) */
 @media only screen and (max-width: 600px) {
-    .col-{
+    .col-sd{
         float: left;
         width: 100%;
-    }
-    @keyframes menu{
-        from {top: 0;}
-        to {top: 157px;}
     }
     body{
         background-image: url("./../imagem/backgorund.jpeg");
@@ -26,10 +32,12 @@
         background-attachment: fixed;
         width: 100%;
     }
+    /* Estilização cabeçalo */
     header{
         position: fixed;
+        z-index: 3;
         background-color: rgba(0,0,0,1);
-        padding: 10px 5px 10px 5px;
+        padding-top: 10px;
         width: 100%;
         right: 0;
         top: 0;
@@ -79,34 +87,66 @@
         transform: rotate(-45deg) translate(10px, -7px);
     }
 
-    header nav{
-        display: none;
-        justify-content: center;
-        align-items: center;
-
-        transition: .4s;
+    /* Estilização Menu de Navegação */
+    .container{
+        width: 100%;
+        height: 214px;
+        background-color: transparent;
+        z-index: 1;
     }
-    header li{
+
+    #menu{
+        display: none;
+        height: 100%;
+        position: relative;
+        justify-content: center;
+        align-items:end;     
+        background-color: #000;  
+        z-index: 2;  
+    }
+    #menu button{
+        background-color: transparent;
+        border: transparent;
+    }
+    #menu nav{
+        padding: 10px;
+    }
+        
+    #menu li{
         display: flex;
         justify-content: center;
     }
-    header a{
+    #menu a{
         color: #ccc;
         text-decoration: none;
         justify-content: center;
     }
-    header nav.active{
+    #menu.active{
         display: flex;
-        position: relative;
-        animation-name: nav_menu;
-        animation-duration: .2s;
+        animation-name: menu;
+        animation-duration: .4s;
+
+        transition: all 0.4s;
     }
-    @keyframes nav_menu {
-        0%{opacity: 0%; left: 0px; top: -157px;}
-        100%{opacity: 100%;left: 0px; top: 0px};        
+    @keyframes menu {
+        0%{height: 0;}
+        100%{height: 100%;}
     }
-    .separa{margin-top: 147px;}
-    .separa.active{margin-top: 214px;};
+    
+    /* Fim Menu de Navegação */
+    .separa{margin-top: -70px;}
+    .separa.active{
+        margin-top: 0px;
+        animation-name: separa;
+        animation-duration: .4s;
+
+        transition: all 0.4s;   
+    }
+    @keyframes separa {
+        0%{margin-top: -70px;}
+        100%{margin-top: 0px;}
+    }
+
     .dados_pessoais{        
         display: flex;
         justify-content: center;
@@ -117,13 +157,126 @@
 
     article{
         padding: 10px;
-        background-color: rgba(0,0,0,.4);      
+        background-color: rgba(0,0,0,.3);      
         text-align: justify;
+        border-radius: 2px;
     }
     article h3{
         display: flex;
         justify-content: center;
     }
+    article a{
+        text-decoration: none;
+    }
+    /* Estilização currículo */
+    .curriculo{
+        display: block;
+    }
+    .curriculo h2{
+        width: 100%;
+        background-color: rgba(0,0,0,.7);
+    }
+    .curriculo h3{
+        width: 100%;
+        background-color: rgba(0,0,0,.6);
+        justify-content: left;
+        margin-top: 10px;
+        margin-bottom: 8px;
+    }
+    .photo{
+        display: flex   ;
+        width: 100%;
+        justify-content: end;
+    }
+    .photo img{
+        margin-top: 20px;
+        margin-right: 10px;
+    }
+
+    .dados_pessoais{
+        display: block;
+        margin-top: -105px;
+    }
+    .dados_pessoais p{
+        width: 70%;
+        text-align: justify;
+    }
+    .midia_social{
+        display: block;
+        width: 100%;        
+        justify-content: center;
+        align-items: center;
+    }
+    .instagram{
+        display: flex;
+        
+    }
+    .linkedin{
+        display: flex;
+    }
+    .github{
+        display: flex;
+    }
+    .midia_social i{
+        width: 9%;
+        padding-right: 10px;
+    }
+
+    .dados_prof{
+        display: block;
+        text-align: start;
+    }
+    .dados_prof li{
+        margin-left: 35px;
+    }
+    .dados_acad{
+        display: block;
+        text-align: start;
+    }
+    .dados_acad li{
+        margin-left: 35px;
+    }
+
+    .entre_cont{
+        display: block;
+        justify-content: left;
+        align-items: center;
+    }
+    .entre_cont input, textarea{
+        background-color: rgba(0,0,0,.8);
+        border: 2px solid black;
+        border-radius: 10px;
+        color: #fff;
+        width: 70%;
+        height: 25px;
+        margin-top: 10px;
+    }
+    .entre_cont .name{
+        display: flex;
+        width: 100%;
+        padding-top: 10px;
+        justify-content: left;
+        align-items: center;
+    }
+    .entre_cont .email{
+        display: flex;
+        width: 100%;
+        justify-content: left;
+        align-items: center;
+    }
+    .entre_cont .mensage{
+        display: flex;
+        width: 100%;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contato h3{
+        width: 100%;
+        background-color: rgba(0,0,0,.6);
+    }
+    
 }
 
 /* Dispositivo pequeno (portrait tablets and large phones, 600px and up) */
@@ -148,6 +301,237 @@
 /* Dispositivos extra largos (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
     body{
+        /* background-image: url("./../imagem/backgorund.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        width: 100%; */
+        background-color: lightblue;
+        font-size: x-large;
+    }
+    header{
+        display: flex;
+        position: fixed;
+        width: 100%;
         background-color: #000;
+        justify-content: center;
+        z-index: 10;
+    }
+    .titulo{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+    }
+    .titulo figure{
+        display: flex;
+        justify-content: center;
+        width: 80%;
+    }
+
+    .titulo button{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 7px;
+        
+        width: 5%;
+        height: 30px;
+        
+        border: 0;
+        background: transparent;
+    }
+    .titulo button span{
+        width: 100%;
+        height: 3px;
+        border-radius: 10px;
+        background-color: #ccc;
+
+        transition: all 0.4s;
+    }
+
+    .titulo button.active span:nth-child(2){
+        opacity: 0;
+        width: 0px;
+    }
+
+    .titulo button.active span:nth-child(1){
+        transform: rotate(-135deg) translate(-7px, -5px);
+    }
+
+    .titulo button.active span:nth-child(3){
+        transform: rotate(-45deg) translate(10px, -7px);
+    }
+
+    /* Estilização Menu */
+
+    .container{
+        display: block;
+        width: 100%;
+        height: 170px;
+        justify-content: end;
+        background-color: transparent;
+        z-index: 1;
+    }
+
+    #menu{
+        display: flex;
+        width: 100%;
+        height: 35px;
+        position: relative;
+        z-index: 5;
+        background-color: #000;
+        padding-bottom: 10px;
+    }
+    #menu nav{display: flex;width: 100%;}
+    #menu ul{
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        align-items: end;
+        
+    }
+    #menu li{
+        display: flex ;
+        
+    }
+    #menu button{
+        background-color: transparent;
+        border: transparent;
+    }
+
+    #menu button:hover{
+        cursor: pointer;
+        color: #fff;
+    }
+    #menu li:hover{
+        color: #fff
+    }
+    #menu.active{
+        display: flex;
+        height: 100%;
+        animation-name: menu;
+        animation-duration: .4s;
+        
+        transition: all 0.4s;
+    }
+    @keyframes menu {
+        0%{height: 0;}
+        100%{height: 100%;}
+    } 
+
+    .separa{margin-top: -25px;}
+    .separa.active{
+        margin-top: 0px;
+        animation-name: separa;
+        animation-duration: .4s;
+
+        transition: all 0.4s;   
+    }
+    @keyframes separa {
+        0%{margin-top: -25px;}
+        100%{margin-top: 0px;}
+    }
+
+    section{
+        background-color: rgba(0,0,0,.5);
+        margin: 20px 80px 20px 80px;
+        padding: 20px;
+        border-radius: 2px;
+    }
+    article h2{
+        width: 100%;
+        background-color: rgba(0, 0, 0, .7);
+        align-items: center;
+    }
+
+    article h3{
+        width: 100%;
+        height: 30px;
+        background-color: rgba(0, 0, 0, .6);
+        align-items: center;
+    }
+
+    .photo{
+        display: flex;
+        width: 100%;
+        justify-content: end;
+        margin-top: 30px;
+    }
+    .photo img{
+        width: 13%;
+        margin-right: 50px;
+    }   
+
+    .dados_pessoais{
+        width: 100%;
+        margin-top: -14%;
+        margin-bottom: 20px;
+    }
+    .dados_pessoais p{
+        margin-top: 20px;
+        margin-left: 30px;
+    }
+
+    .midia_social{
+        display: inline-block;
+        width: 100%;  
+        margin-bottom: 20px;      
+        align-items: center;
+    }
+    .midia_social a{
+        text-decoration: none;
+    }
+    .midia_social i:hover{
+        cursor: pointer;
+        color: #fff;
+    }
+    .midia_social i{
+        display: block;
+        align-items: center;
+    }
+    .midia_social svg{
+        display: flex;
+        width: 40px;
+        margin-left: 30px;
+        margin-top: 20px;
+    }
+    
+    .instagram, .linkedin, .github{
+        display: flex;
+        align-items: center;
+    }
+    .midia_social p{
+        margin-left: 20px;
+    }
+    
+    .dados_prof{
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 20px;
+        align-items: center;
+    }
+    .dados_prof p{
+        margin-left: 30px;
+        margin-top: 20px;
+    }
+    .dados_prof li{
+        margin-top: 20px;
+        margin-left: 90px;
+    }
+
+    .dados_acad{
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 20px;
+        align-items: center;
+    }
+    .dados_acad p{
+        margin-left: 30px;
+        margin-top: 20px;
+    }
+    .dados_acad li{
+        margin-top: 20px;
+        margin-left: 90px;
     }
 }
